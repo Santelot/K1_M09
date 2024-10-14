@@ -1,0 +1,494 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook - K1 - M09</h1>
+
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1</option>
+                <option value="K2">K2</option>
+                <option value="K3">K3</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        <h2 id="selected-level" class="level-title">Nivel: K1</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0 -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+        <div class="subtitle">Asegúrate de tener listos todos los materiales indicados en la DIAPOSITIVA 1 antes de iniciar la misión.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Asegúrate de tener listos todos los materiales indicados en la Diapositiva 1 antes de iniciar la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida_introduccion')">
+        <div class="title">🎉 Actividad 1: Bienvenida e Introducción al Día ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Dar la bienvenida a los Genios y preparar el ambiente para el aprendizaje.</div>
+    </div>
+    <div id="bienvenida_introduccion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 2 "Bienvenida" y saluda a los niños mientras muestras el logo de Gnius Club. Luego introduce el tema del día.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, Code SQUAD! Bienvenidos a Saborilandia, donde hoy tenemos una gran misión: ¡hacer los helados más deliciosos! Pero antes de poder usarlos, necesitamos descubrir el orden correcto de los ingredientes para que la máquina mágica funcione. ¿Están listos para ayudarme con este reto? Primero vamos a calentar nuestros cerebros con un pequeño ejercicio.</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 3 "Gimnasio CODE SQUAD" y prepara a los niños para el ejercicio de estimulación.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Vamos a entrenar nuestros cerebros en el Gimnasio del CODE SQUAD! Esta canción tiene instrucciones que nos ayudarán a preparar nuestros cerebros para organizar los ingredientes en el orden correcto. ¿Están listos para escuchar y movernos al ritmo de la música? ¡Vamos a intentarlo juntos!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile_secuenciacion')">
+        <div class="title">🕺 Actividad 2: Baile de Secuenciación ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Preparar a los niños para la misión con un ejercicio de secuenciación a través de un baile.</div>
+    </div>
+    <div id="baile_secuenciacion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 4 "Baile de Secuenciación" y guía a los niños para que sigan las instrucciones de la canción.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Ahora que ya estamos listos, es hora de poner a prueba nuestra secuenciación! Sigan las instrucciones de la canción y muevan sus cuerpos siguiendo el orden que les pida. ¡No se preocupen si la primera vez no lo logran todo, eso es parte del aprendizaje! Intentémoslo varias veces para que cada vez sea más fácil. ¡Vamos, Code SQUAD, a movernos juntos!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento_problema')">
+        <div class="title">📖 Actividad 3: Planteamiento del Problema ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Introducir a los niños en el contexto de la misión utilizando la historia.</div>
+    </div>
+    <div id="planteamiento_problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 5, adopta la actitud de un cuenta cuentos y narra la historia del diálogo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Bienvenidos a Saborilandia, donde la heladera Luna necesita nuestra ayuda. Su máquina mágica crea helados deliciosos, pero algo salió mal: las instrucciones se han perdido y sin ellas, la máquina no puede funcionar. Hoy hay una gran fiesta y todos esperan probar los helados más deliciosos. Nuestra misión es descubrir el orden correcto para que los ingredientes funcionen dentro de la máquina. ¿Podremos hacerlo juntos?</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 6, continúa con la actitud del cuenta cuentos y explica el reto que deben resolver.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Code SQUAD, atención! La máquina de Luna no producirá helados hasta que los ingredientes se coloquen en el orden correcto. Tenemos cinco ingredientes: fruta, leche, chispas, jarabe y un topping especial. El reto de hoy es encontrar la secuencia perfecta para que la máquina funcione y empiece a producir los helados. Ustedes deberán trabajar en equipo para colocar los ingredientes, probar diferentes combinaciones y ver cuál hace que la máquina comience. ¿Listos para este gran desafío?</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion_equipos')">
+        <div class="title">🤝 Actividad 4: Formación de Parejas y Organización ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Explicar la importancia del trabajo en equipo y asegurar la organización.</div>
+    </div>
+    <div id="formacion_equipos" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 7 "Formación de Equipos", explica la importancia de trabajar en equipo y junta a los niños en pares para la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Equipo CODE SQUAD! Trabajar en equipo nos ayuda a resolver problemas más rápido y de manera más divertida. Como dice el dicho: "Dos cabezas piensan mejor que una." Cada uno tiene algo único que aportar, ¡así que hoy van a descubrir qué tan geniales pueden ser trabajando juntos! Para el reto de hoy, necesitamos que formen parejas. Si ven que falta alguien, únanse y formen un trío para que todos tengan equipo. ¡Vamos, busquen a su compañero y prepárense para la misión!</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 8 "Organización de Equipos" y verifica que todos los niños estén emparejados y organizados para trabajar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¿Ya todos tienen a su compañero? ¡Perfecto! Recuerden que trabajar en pareja significa compartir ideas y ayudarse mutuamente. ¡Cuanto más trabajen juntos, más divertida será la misión! Ahora que están organizados, revisen que todo esté listo porque en breve comenzamos el reto. ¡Estoy seguro de que harán un gran equipo!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('explicacion_reto')">
+        <div class="title">⚙️ Actividad 5: Explicación del Reto de Codificación ⏰ Tiempo: Variable <span id="activity-5-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Explicar el reto de codificación que deberán resolver.</div>
+    </div>
+    <div id="explicacion_reto" class="content">
+        <table id="activity-5-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('construccion_bloques')">
+        <div class="title">🔧 Actividad 6: Construcción con Bloques ⏰ Tiempo: Variable <span id="activity-6-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Ensamblar bloques siguiendo los códigos generados.</div>
+    </div>
+    <div id="construccion_bloques" class="content">
+        <table id="activity-6-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('obstaculo_historia')">
+        <div class="title">⚠️ Actividad 7: Mensaje del Cuartel ⏰ Tiempo: Variable <span id="activity-7-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Introducir un obstáculo en la narrativa para mantener el interés y la motivación.</div>
+    </div>
+    <div id="obstaculo_historia" class="content">
+        <table id="activity-7-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion_reflexion')">
+        <div class="title">🎉 Actividad 8: Conclusión de la Historia y Reflexión ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Cierre de la clase y preguntas de reflexión para los Genios.</div>
+    </div>
+    <div id="conclusion_reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la DIAPOSITIVA 29, cuenta el desenlace de la historia y realiza preguntas de reflexión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Felicidades, CODE SQUAD! ¡Lo logramos! Gracias a su increíble trabajo en equipo, los dulces están perfectamente organizados para la fiesta del Rey Dulce. ¡Todos los personajes están felices y emocionados porque la fiesta será un gran éxito gracias a ustedes! Ahora, quiero hacerles algunas preguntas para que reflexionemos sobre lo que aprendimos hoy:<br><br>
+                    1. ¿Por qué fue importante seguir el código con mucho cuidado para que los dulces quedaran bien organizados?<br>
+                    2. ¿Cuáles dulces lograron organizar usando los bloques de colores?<br>
+                    3. ¿Qué fue lo más divertido o desafiante al seguir el código?</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+               <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+        }
+    }
+
+    function updateContent() {
+        var time = document.getElementById("class-time").value;
+        var level = document.getElementById("class-level").value;
+        document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+        document.getElementById("selected-level").innerText = "Nivel: " + level;
+
+        var steps = {
+     "K1": {
+    "5.1": [
+        { 
+            "step": 1, 
+            "time": { "30": 1, "40": 1, "50": 1 }, 
+            "accion": "Reproduce la DIAPOSITIVA 9.",
+            "dialogo": "¡CODE SQUAD! Para que Luna pueda producir helados, necesitamos descubrir el orden correcto de los ingredientes. Cada equipo va a crear un código visual usando bloques de colores. Por ejemplo, un bloque amarillo representa la fruta. Ustedes pueden elegir los colores que prefieran para los demás ingredientes. ¡Trabajen juntos y encuentren la secuencia correcta!"
+        },
+        { 
+            "step": 2, 
+            "time": { "30": 2, "40": 2, "50": 2 }, 
+            "accion": "Reproduce la DIAPOSITIVA 10 y distribuye los materiales.",
+            "dialogo": "Aquí tienen sus hojas y colores. Dibujen los ingredientes y asignen un bloque de color para cada uno. ¡Ahora vamos a crear nuestro código para descubrir el orden correcto!"
+        },
+        { 
+            "step": 3, 
+            "time": { "30": 5, "40": 10, "50": 10 }, 
+            "accion": "Reproduce la DIAPOSITIVA 11.",
+            "dialogo": "¡Muy bien, CODE SQUAD! Dibujen cada ingrediente con su bloque de color y prueben diferentes combinaciones. No se preocupen si no funciona al principio, ¡el ensayo y error es parte del proceso!"
+        }
+    ],
+        "6": [
+        { 
+            "step": 1, 
+            "time": { "30": 2, "40": 2, "50": 2 }, 
+            "accion": "Reproduce la DIAPOSITIVA 18 y organiza el intercambio.",
+            "dialogo": "¡CODE SQUAD! Ahora que cada equipo ha creado un código, es hora de intercambiarlos. Voy a pasar para recoger los códigos, asignarlos a otro equipo y así asegurarnos de que los ingredientes se organizan de forma correcta. ¡Usen el código que recibieron para ayudar a Luna a preparar los helados más deliciosos!"
+        },
+        { 
+            "step": 2, 
+            "time": { "30": 7, "40": 10, "50": 10 }, 
+            "accion": "Reproduce la DIAPOSITIVA 19 y guía la construcción.",
+            "dialogo": "¡Adelante, CODE SQUAD! Usen el código que recibieron para organizar los bloques en el orden correcto: fruta, leche, chispas. Repitan el patrón hasta que no queden más bloques. ¡Vamos a ver cómo se llena la máquina de helados mágicos!"
+        }
+    ],
+    "7": [
+        { 
+            "step": 1, 
+            "time": { "30": 3, "40": 4, "50": 5 }, 
+            "accion": "Reproduce la DIAPOSITIVA 22 y explica el obstáculo.",
+            "dialogo": "¡CODE SQUAD! ¡Oh no! Justo cuando la máquina de Luna iba a empezar a hacer helados, ¡se detuvo! Parece que uno de los ingredientes cayó en el lugar equivocado. El cuartel general nos ha enviado un nuevo código para resolverlo. ¡Vamos a intentarlo otra vez juntos!"
+        },
+        { 
+            "step": 2, 
+            "time": { "30": 7, "40": 10, "50": 10 }, 
+            "accion": "Reproduce la DIAPOSITIVA 23 y guía la construcción con el nuevo código.",
+            "dialogo": "¡Vamos, CODE SQUAD! Usen este nuevo código: fruta, leche, chispas. Coloquen los bloques en este orden y repítanlo hasta que se acaben. ¡Luna estará feliz cuando la máquina empiece a funcionar!"
+        }
+    ]
+    },
+    "K2": {
+    "5.2": [
+        { 
+            "step": 1, 
+            "time": { "30": 1, "40": 1, "50": 1 }, 
+            "accion": "Reproduce la DIAPOSITIVA 12.",
+            "dialogo": "¡CODE SQUAD! Ahora tenemos un nuevo ingrediente: el jarabe. Necesitamos averiguar dónde colocarlo en la secuencia. Cada equipo dibujará los cuatro ingredientes y los codificará con bloques de colores. Pueden usar, por ejemplo, verde para chispas y naranja para jarabe. ¡Exploren diferentes combinaciones hasta encontrar la correcta!"
+        },
+        { 
+            "step": 2, 
+            "time": { "30": 2, "40": 2, "50": 2 }, 
+            "accion": "Reproduce la DIAPOSITIVA 13 y distribuye los materiales.",
+            "dialogo": "Aquí tienen sus hojas. Dibujen los ingredientes y asignen dos bloques de colores para cada uno. Recuerden anotar sus intentos para ver qué combinaciones funcionaron y cuáles no."
+        },
+        { 
+            "step": 3, 
+            "time": { "30": 5, "40": 10, "50": 10 }, 
+            "accion": "Reproduce la DIAPOSITIVA 14.",
+            "dialogo": "¡CODE SQUAD, manos a la obra! Dibujen su código con los cuatro ingredientes. Prueben varias combinaciones y anoten cuál funciona mejor. ¡Juntos lo lograrán!"
+        }
+    ],
+    "6": [
+        { 
+            "step": 1, 
+            "time": { "30": 2, "40": 2, "50": 2 }, 
+            "accion": "Reproduce la DIAPOSITIVA 20 y organiza el intercambio.",
+            "dialogo": "¡Genios del CODE SQUAD! Ahora que los ingredientes han aumentado, cada equipo intercambiará su código con otro. ¡Vamos a ver si podemos descubrir la secuencia correcta con un código diferente!"
+        },
+        { 
+            "step": 2, 
+            "time": { "30": 7, "40": 10, "50": 10 }, 
+            "accion": "Reproduce la DIAPOSITIVA 21 y guía la construcción.",
+            "dialogo": "¡Es hora de construir, CODE SQUAD! Usen el código que recibieron para organizar los ingredientes: fruta, leche, chispas, jarabe. Repitan este patrón hasta que los bloques se acaben. ¡Vamos a preparar los mejores helados!"
+        }
+    ],
+    "7": [
+        { 
+            "step": 1, 
+            "time": { "30": 3, "40": 4, "50": 5 }, 
+            "accion": "Reproduce la DIAPOSITIVA 24 y explica el obstáculo.",
+            "dialogo": "¡Oh no, CODE SQUAD! Justo cuando los helados estaban por salir, la máquina se detuvo. Parece que el jarabe se cayó en el lugar equivocado. Tenemos un nuevo código del cuartel general para resolverlo. ¡Vamos a intentarlo otra vez!"
+        },
+        { 
+            "step": 2, 
+            "time": { "30": 7, "40": 10, "50": 10 }, 
+            "accion": "Reproduce la DIAPOSITIVA 25 y guía la construcción con el nuevo código.",
+            "dialogo": "¡Adelante, CODE SQUAD! Sigan este nuevo patrón: fruta, leche, chispas, jarabe. Repitan la secuencia hasta que se terminen los bloques. ¡Seguro que Luna estará feliz con sus helados perfectos!"
+        }
+    ]
+},
+    "K3": {
+    "5.3": [
+        { 
+            "step": 1, 
+            "time": { "30": 1, "40": 1, "50": 1 }, 
+            "accion": "Reproduce la DIAPOSITIVA 15.",
+            "dialogo": "¡CODE SQUAD! Además del jarabe, ahora tenemos un topping especial. Cada equipo va a dibujar y codificar los cinco ingredientes usando cuatro bloques por pieza. Por ejemplo, pueden usar rojo para el topping. ¡Trabajen juntos y descubran la secuencia que hace funcionar la máquina!"
+        },
+        { 
+            "step": 2, 
+            "time": { "30": 2, "40": 2, "50": 2 }, 
+            "accion": "Reproduce la DIAPOSITIVA 16 y distribuye los materiales.",
+            "dialogo": "Aquí están sus materiales. Dibujen cada ingrediente y asignen cuatro bloques de colores. Anoten cada intento para encontrar el código final. ¡Vamos a descubrir juntos la secuencia perfecta!"
+        },
+        { 
+            "step": 3, 
+            "time": { "30": 5, "40": 10, "50": 10 }, 
+            "accion": "Reproduce la DIAPOSITIVA 17 y guía la construcción.",
+            "dialogo": "¡Excelente trabajo, CODE SQUAD! Dibujen su código con los cinco ingredientes. Prueben todas las combinaciones posibles y anoten cuál fue la correcta. ¡Están muy cerca de resolver el reto!"
+        }
+    ],
+    "6": [
+        { 
+            "step": 1, 
+            "time": { "30": 2, "40": 2, "50": 2 }, 
+            "accion": "Reproduce la DIAPOSITIVA 22 y organiza el intercambio.",
+            "dialogo": "¡Excelente trabajo, CODE SQUAD! Cada equipo ha creado un código increíble. Ahora vamos a intercambiarlos y trabajar con el código de otro equipo para descubrir si encontramos la secuencia perfecta. ¡Manos a la obra!"
+        },
+        { 
+            "step": 2, 
+            "time": { "30": 7, "40": 10, "50": 10 }, 
+            "accion": "Reproduce la DIAPOSITIVA 23 y guía la construcción.",
+            "dialogo": "¡Vamos, CODE SQUAD! Usen el código que recibieron para organizar los bloques: fruta, leche, chispas, jarabe, topping. Repitan el patrón hasta que se acaben los bloques. ¡Luna estará feliz con sus helados perfectos!"
+        }
+    ],
+    "7": [
+        { 
+            "step": 1, 
+            "time": { "30": 3, "40": 4, "50": 5 }, 
+            "accion": "Reproduce la DIAPOSITIVA 26 y explica el obstáculo.",
+            "dialogo": "¡CODE SQUAD! La máquina no puede seguir funcionando porque el topping no se colocó bien. Nos han enviado un nuevo código desde el cuartel. ¡Vamos a resolverlo rápidamente!"
+        },
+        { 
+            "step": 2, 
+            "time": { "30": 7, "40": 10, "50": 10 }, 
+            "accion": "Reproduce la DIAPOSITIVA 27 y guía la construcción con el nuevo código.",
+            "dialogo": "¡CODE SQUAD! Sigan este último patrón: fruta, leche, chispas, jarabe, topping. ¡Completen la secuencia y asegúrense de que los helados estén perfectos!"
+        }
+    ]
+    }
+};
+
+
+
+        // Mostrar u ocultar actividades según el nivel seleccionado
+        var activities = {
+            "activity-0": true,
+            "activity-1": true,
+            "activity-2": true,
+            "activity-3": true,
+            "activity-4": true,
+            "activity-5": true,
+            "activity-6": true,
+            "activity-7": steps[level]["7"].some(s => s.time[time] > 0),
+            "activity-8": true
+        };
+
+        Object.keys(activities).forEach(function(activityId) {
+            var activityElement = document.getElementById(activityId);
+            if (activities[activityId]) {
+                activityElement.style.display = "block";
+            } else {
+                activityElement.style.display = "none";
+            }
+        });
+
+        // Renderizar los pasos dinámicamente en las tablas de actividades 5, 6 y 7
+        renderActivitySteps("activity-5-content", steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time);
+        renderActivitySteps("activity-6-content", steps[level]["6"], time);
+        renderActivitySteps("activity-7-content", steps[level]["7"], time);
+
+        document.getElementById("activity-5-total-time").innerText = calculateTotalTime(steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time) + " minutos";
+        document.getElementById("activity-6-total-time").innerText = calculateTotalTime(steps[level]["6"], time) + " minutos";
+        document.getElementById("activity-7-total-time").innerText = calculateTotalTime(steps[level]["7"], time) + " minutos";
+    }
+
+    function renderActivitySteps(contentId, steps, time) {
+        var contentContainer = document.getElementById(contentId);
+        contentContainer.innerHTML = "";
+        steps.forEach(function(step) {
+            if (step.time[time] > 0) {
+                var row = document.createElement("tr");
+                var stepCell = document.createElement("td");
+                var dialogCell = document.createElement("td");
+
+                stepCell.innerHTML = "<strong>PASO " + step.step + " (" + step.time[time] + " minutos):</strong> " + step.accion;
+                dialogCell.innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> " + step.dialogo;
+
+                row.appendChild(stepCell);
+                row.appendChild(dialogCell);
+                contentContainer.appendChild(row);
+            }
+        });
+    }
+
+    function calculateTotalTime(steps, time) {
+        return steps.reduce((total, step) => total + step.time[time], 0);
+    }
+
+    updateContent();
+</script>
+
+
+
+
+</body>
+</html>
